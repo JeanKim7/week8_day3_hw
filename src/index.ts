@@ -25,21 +25,21 @@ class User {
 
 }
 
-function createUser (name:string, age: number){
+function createUser (name:string, age: number):User{
     let uuid:string = uuidv4()
     return new User(uuid, name, age)
 }
 
-function createItem (name:string, price:number, description:string){
+function createItem (name:string, price:number, description:string):Item{
     let uuid:string = uuidv4()
     return new Item(uuid, name, price, description)
 }
 
-function addToCart (item: Item, user: User){
+function addToCart (item: Item, user: User):void{
     user.cart.push(item)
 }
 
-function removeFromCart (item: Item, user:User){
+function removeFromCart (item: Item, user:User):void{
     let newCart:Item[] = []
     for (let itm of user.cart) {
         if (itm !== item){
@@ -49,7 +49,7 @@ function removeFromCart (item: Item, user:User){
     user.cart = newCart
 }
 
-function removeQuantityFromCart(item:Item, user:User, amount: number){
+function removeQuantityFromCart(item:Item, user:User, amount: number):void{
     let newCart:Item[] = []
     let count:number = 0
     for (let itm of user.cart) {
@@ -64,7 +64,7 @@ function removeQuantityFromCart(item:Item, user:User, amount: number){
     user.cart = newCart
 }
 
-function cartTotal(user:User){
+function cartTotal(user:User):number{
     let total:number = 0
     for (let item of user.cart){
         total += item.price
@@ -72,7 +72,7 @@ function cartTotal(user:User){
     return total
 }
 
-function printCart(user:User){
+function printCart(user:User):void{
     console.log(user.cart)
 }
 
