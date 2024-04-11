@@ -1,0 +1,19 @@
+{
+  "name": "week8_day3_hw",
+  "version": "1.0.0",
+  "description": "Beginning a shopping cart browser project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./dist/index.js"
+  },
+  "author": "Jean Kim",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/uuid": "^9.0.8",
+    "uuid": "^9.0.1"
+  }
+}
